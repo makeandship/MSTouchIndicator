@@ -3,7 +3,7 @@
 //  MSTouchIndicator
 //
 //  Created by Simon Heys on 07/03/2015.
-//  Copyright (c) 2015 Simon Heys. All rights reserved.
+//  Copyright (c) 2015 Make and Ship Limited. All rights reserved.
 //
 
 #import "MSViewController.h"
