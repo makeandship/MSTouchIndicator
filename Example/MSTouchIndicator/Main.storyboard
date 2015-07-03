@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8ah-sj-wKc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MSTouchIndicator-->
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="MSViewController" sceneMemberID="viewController">
@@ -16,12 +16,62 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVL-fL-PWz">
+                                <rect key="frame" x="531" y="84" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="whP-gf-Uak" eventType="valueChanged" id="DBS-eq-3Ba"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show touches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNc-s9-zdl">
+                                <rect key="frame" x="20" y="89" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap me to see it working with keyboard too" translatesAutoresizingMaskIntoConstraints="NO" id="SSS-gu-40l">
+                                <rect key="frame" x="20" y="135" width="560" height="445"/>
+                                <color key="backgroundColor" red="0.94893652200698853" green="0.94907277822494507" blue="0.94890671968460083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SSS-gu-40l" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="20" id="7lk-JA-lww"/>
+                            <constraint firstItem="vNc-s9-zdl" firstAttribute="centerY" secondItem="GVL-fL-PWz" secondAttribute="centerY" id="EtY-Ox-luW"/>
+                            <constraint firstItem="GVL-fL-PWz" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="20" id="GrJ-oj-Ard"/>
+                            <constraint firstAttribute="trailing" secondItem="SSS-gu-40l" secondAttribute="trailing" constant="20" id="WbO-pe-0h4"/>
+                            <constraint firstAttribute="trailing" secondItem="GVL-fL-PWz" secondAttribute="trailing" constant="20" id="cX9-4U-jV6"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="SSS-gu-40l" secondAttribute="bottom" constant="20" id="tbT-47-FC7"/>
+                            <constraint firstItem="SSS-gu-40l" firstAttribute="top" secondItem="GVL-fL-PWz" secondAttribute="bottom" constant="20" id="uZG-Fz-ITn"/>
+                            <constraint firstItem="vNc-s9-zdl" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="20" id="xdb-Rl-VVl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MSTouchIndicator" id="x3T-nB-FIZ"/>
+                    <connections>
+                        <outlet property="enabledSwitch" destination="GVL-fL-PWz" id="64G-RX-93i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="536" y="551"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nTy-QH-hb2">
+            <objects>
+                <navigationController id="8ah-sj-wKc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8bj-Qe-OP0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="E3D-zg-dkK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVI-hb-Lvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193" y="551"/>
         </scene>
     </scenes>
 </document>

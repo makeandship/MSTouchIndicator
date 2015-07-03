@@ -1,12 +1,11 @@
 //
-//  MSTouchIndicatorApplication.m
-//  Hark
+//  MSTouchIndicator.m
 //
 //  Created by Simon on 03/07/2015.
-//  Copyright © 2015 Simon Heys Limited. All rights reserved.
+//  Copyright © 2015 Make and Ship Limited. All rights reserved.
 //
 
-#import "MSTouchIndicatorApplication.h"
+#import "MSTouchIndicator.h"
 
 @interface MSTouchIndicatorView : UIView
 @property CATransform3D touchEndTransform;

@@ -1,19 +1,20 @@
 {
   "name": "MSTouchIndicator",
   "version": "0.1.0",
-  "summary": "A short description of MSTouchIndicator.",
+  "summary": "Show touch interactions in your app in realtime, for screen recordings or demos",
   "description": "                       An optional longer description of MSTouchIndicator\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/MSTouchIndicator",
+  "homepage": "https://github.com/makeandship/MSTouchIndicator",
   "license": "MIT",
   "authors": {
-    "Simon Heys": "si@simonheys.com"
+    "Simon Heys": "simon@makeandship.co.uk"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/MSTouchIndicator.git",
+    "git": "https://github.com/makeandship/MSTouchIndicator.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/makeandship",
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
@@ -21,5 +22,6 @@
     "MSTouchIndicator": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "public_header_files": "Pod/Classes/**/*.h"
 }
