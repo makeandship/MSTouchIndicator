@@ -3,10 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "0.1.0"
   s.summary          = "Show touch interactions in your app in realtime, for screen recordings or demos"
   s.description      = <<-DESC
-                       An optional longer description of MSTouchIndicator
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       Simple library for indicating touches in your app. Great for making sceen recordings or running demos.
                        DESC
   s.homepage         = "https://github.com/makeandship/MSTouchIndicator"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
