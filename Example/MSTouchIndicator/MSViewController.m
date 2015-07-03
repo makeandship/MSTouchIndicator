@@ -7,9 +7,10 @@
 //
 
 #import "MSViewController.h"
+#import "MSTouchIndicator.h"
 
 @interface MSViewController ()
-
+@property (strong, nonatomic) IBOutlet UISwitch *enabledSwitch;
 @end
 
 @implementation MSViewController
@@ -17,13 +18,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self updateShowsTouches];
+}
+
+- (void)updateShowsTouches
+{
+    MSTouchIndicatorApplication *touchIndicatorApplication = (MSTouchIndicatorApplication *)[UIApplication sharedApplication];
+    touchIndicatorApplication.showsTouches = self.enabledSwitch.on;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)switchChanged:(id)sender
+{
+    [self updateShowsTouches];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 @import UIKit;
 #import "MSAppDelegate.h"
-#import "MSTouchIndicatorApplication.h"
+#import "MSTouchIndicator.h"
 
 int main(int argc, char * argv[])
 {

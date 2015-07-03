@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "46D538981F64AAA6A34A467B"
+               BlueprintIdentifier = "390C3BB2F65CABFE2DA34D2D"
                BuildableName = "MSTouchIndicator.framework"
                BlueprintName = "Pods-MSTouchIndicator_Example-MSTouchIndicator"
                ReferencedContainer = "container:Pods.xcodeproj">
