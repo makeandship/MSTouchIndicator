@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'MSTouchIndicator_Example', :exclusive => true do
+  pod "MSTouchIndicator", :path => "../"
+end
+
+target 'MSTouchIndicator_Tests', :exclusive => true do
+  pod "MSTouchIndicator", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
