@@ -27,4 +27,3 @@ Simon Heys, simon@makeandship.co.uk
 ## License
 
 MSTouchIndicator is available under the MIT license. See the LICENSE file for more info.
-=======
