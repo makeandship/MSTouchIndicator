@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "MSTouchIndicator"
-  s.version          = "0.1.1"
+  s.version          = "0.1.3"
   s.summary          = "Show touch interactions in your app in realtime, for screen recordings or demos"
   s.description      = <<-DESC
                        Simple library for indicating touches in your app. Great for making sceen recordings or running demos.

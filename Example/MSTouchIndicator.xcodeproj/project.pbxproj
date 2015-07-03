@@ -23,7 +23,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		F4B7FEAA1B46C761006B158A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B7FEA91B46C761006B158A /* Launch Screen.storyboard */; };
+		F421BC221B46D0F2005C8972 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F421BC211B46D0F2005C8972 /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		DA8C2F1942EE2C516E21EFCD /* Pods_MSTouchIndicator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSTouchIndicator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6A573692A8DF39B055F404 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E8B0DF884F67B3E41EFBD36B /* Pods-MSTouchIndicator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSTouchIndicator_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSTouchIndicator_Tests/Pods-MSTouchIndicator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F4B7FEA91B46C761006B158A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F421BC211B46D0F2005C8972 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 				6003F5A6195388D20070C39A /* MSViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				F4B7FEA91B46C761006B158A /* Launch Screen.storyboard */,
+				F421BC211B46D0F2005C8972 /* Launch Screen.xib */,
 			);
 			name = "Example for MSTouchIndicator";
 			path = MSTouchIndicator;
@@ -280,8 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				F421BC221B46D0F2005C8972 /* Launch Screen.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				F4B7FEAA1B46C761006B158A /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
