@@ -1,6 +1,6 @@
 # MSTouchIndicator
 
-[![CI Status](http://img.shields.io/travis/Simon Heys/MSTouchIndicator.svg?style=flat)](https://travis-ci.org/Simon Heys/MSTouchIndicator)
+[![CI Status](http://img.shields.io/travis/makeandship/MSTouchIndicator.svg?style=flat)](https://travis-ci.org/makeandship/MSTouchIndicator)
 [![Version](https://img.shields.io/cocoapods/v/MSTouchIndicator.svg?style=flat)](http://cocoapods.org/pods/MSTouchIndicator)
 [![License](https://img.shields.io/cocoapods/l/MSTouchIndicator.svg?style=flat)](http://cocoapods.org/pods/MSTouchIndicator)
 [![Platform](https://img.shields.io/cocoapods/p/MSTouchIndicator.svg?style=flat)](http://cocoapods.org/pods/MSTouchIndicator)
