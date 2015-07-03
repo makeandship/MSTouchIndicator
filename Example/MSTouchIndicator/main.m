@@ -8,10 +8,11 @@
 
 @import UIKit;
 #import "MSAppDelegate.h"
+#import "MSTouchIndicatorApplication.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MSAppDelegate class]));
+        return UIApplicationMain(argc, argv, NSStringFromClass([MSTouchIndicatorApplication class]), NSStringFromClass([MSAppDelegate class]));
     }
 }
