@@ -1,6 +1,6 @@
 PODS:
   - Expecta (1.0.0)
-  - MSTouchIndicator (0.1.3)
+  - MSTouchIndicator (0.1.5)
   - Specta (1.0.2)
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  MSTouchIndicator: f56909219ad3f951fef7667655d8b27dd6d0a162
+  MSTouchIndicator: 4da2a47f4ec6475230505ae4dd8d0f195cc7d64c
   Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
 
 COCOAPODS: 0.38.0

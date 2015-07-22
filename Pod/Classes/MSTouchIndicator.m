@@ -16,11 +16,7 @@
 {
     NSArray *windows = [[UIApplication sharedApplication] windows];
     if ( windows.count > 1 ) {
-        for ( UIWindow *window in windows ) {
-            if ( ![window.rootViewController isEqual:self]) {
-                return [window.rootViewController preferredStatusBarStyle];
-            }
-        }
+        return [[[[UIApplication sharedApplication].delegate window] rootViewController] preferredStatusBarStyle];
     }
     return UIStatusBarStyleDefault;
 }
@@ -79,18 +75,22 @@
 {
     if ((self = [super init])) {
         self.touchIndicatorsKeyedByTouch = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsStrongMemory capacity:10];
-        self.showsTouches = NO;
         self.touchColor = [UIColor grayColor];
         self.touchEndTransform = CATransform3DMakeScale(1.5, 1.5, 1);
         self.touchEndAnimationDuration = 0.5f;
-        
-        self.touchIndicatorWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        self.touchIndicatorWindow.userInteractionEnabled = NO;
-        self.touchIndicatorWindow.windowLevel = 1e+08; //1e07 is keyboard window level!
-        
-        self.touchIndicatorWindow.rootViewController = [MSTouchIndicatorViewController new];
     }
     return self;
+}
+
+- (UIWindow *)touchIndicatorWindow
+{
+    if ( nil == _touchIndicatorWindow) {
+        _touchIndicatorWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        _touchIndicatorWindow.userInteractionEnabled = NO;
+        _touchIndicatorWindow.windowLevel = 1e+08; //1e07 is keyboard window level!
+        _touchIndicatorWindow.rootViewController = [MSTouchIndicatorViewController new];
+    }
+    return _touchIndicatorWindow;
 }
 
 - (void)setShowsTouches:(BOOL)showsTouches
@@ -98,11 +98,12 @@
     _showsTouches = showsTouches;
     if ( showsTouches ) {
         [self.touchIndicatorWindow makeKeyAndVisible];
-        self.touchIndicatorWindow.hidden = NO;
+        [[[UIApplication sharedApplication].delegate window] makeKeyWindow];
         [self.touchIndicatorWindow.rootViewController setNeedsStatusBarAppearanceUpdate];
     }
     else {
         self.touchIndicatorWindow.hidden = YES;
+        self.touchIndicatorWindow = nil;
     }
 }
 
