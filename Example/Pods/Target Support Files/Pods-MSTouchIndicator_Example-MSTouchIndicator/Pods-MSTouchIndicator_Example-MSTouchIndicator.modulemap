@@ -1,6 +1,0 @@
-framework module MSTouchIndicator {
-  umbrella header "Pods-MSTouchIndicator_Example-MSTouchIndicator-umbrella.h"
-
-  export *
-  module * { export * }
-}
