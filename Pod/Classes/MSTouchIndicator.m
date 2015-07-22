@@ -7,6 +7,26 @@
 
 #import "MSTouchIndicator.h"
 
+@interface MSTouchIndicatorViewController : UIViewController
+@end
+
+@implementation MSTouchIndicatorViewController
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    NSArray *windows = [[UIApplication sharedApplication] windows];
+    if ( windows.count > 1 ) {
+        for ( UIWindow *window in windows ) {
+            if ( ![window.rootViewController isEqual:self]) {
+                return [window.rootViewController preferredStatusBarStyle];
+            }
+        }
+    }
+    return UIStatusBarStyleDefault;
+}
+
+@end
+
 @interface MSTouchIndicatorView : UIView
 @property CATransform3D touchEndTransform;
 @property NSTimeInterval touchEndAnimationDuration;
@@ -68,10 +88,22 @@
         self.touchIndicatorWindow.userInteractionEnabled = NO;
         self.touchIndicatorWindow.windowLevel = 1e+08; //1e07 is keyboard window level!
         
-        self.touchIndicatorWindow.rootViewController = [UIViewController new];
-        [self.touchIndicatorWindow makeKeyAndVisible];
+        self.touchIndicatorWindow.rootViewController = [MSTouchIndicatorViewController new];
     }
     return self;
+}
+
+- (void)setShowsTouches:(BOOL)showsTouches
+{
+    _showsTouches = showsTouches;
+    if ( showsTouches ) {
+        [self.touchIndicatorWindow makeKeyAndVisible];
+        self.touchIndicatorWindow.hidden = NO;
+        [self.touchIndicatorWindow.rootViewController setNeedsStatusBarAppearanceUpdate];
+    }
+    else {
+        self.touchIndicatorWindow.hidden = YES;
+    }
 }
 
 - (void)sendEvent:(UIEvent *)event
