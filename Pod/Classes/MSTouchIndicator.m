@@ -150,12 +150,16 @@
 {
     NSEnumerator *enumerator = [self.touchIndicatorsKeyedByTouch keyEnumerator];
     UITouch *touch;
+    NSMutableArray *touchesToRemove = [NSMutableArray new];
     while ( touch = [enumerator nextObject] ) {
         if ( !([activeTouches containsObject:touch]) ) {
-            MSTouchIndicatorView *touchIndicatorView = [self.touchIndicatorsKeyedByTouch objectForKey:touch];
-            [touchIndicatorView removeFromSuperviewAnimated];
-            [self.touchIndicatorsKeyedByTouch removeObjectForKey:touch];
+            [touchesToRemove addObject:touch];
         }
+    }
+    for ( touch in touchesToRemove ) {
+        MSTouchIndicatorView *touchIndicatorView = [self.touchIndicatorsKeyedByTouch objectForKey:touch];
+        [touchIndicatorView removeFromSuperviewAnimated];
+        [self.touchIndicatorsKeyedByTouch removeObjectForKey:touch];
     }
 }
 
